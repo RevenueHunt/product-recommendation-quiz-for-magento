@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @author 1902 Software
+ * @copyright Copyright (c) 2022
+ * @package Revenuehunt_ProductQuiz
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="standard">
+		<route id="productquiz" frontName="productquiz">
+			<module name="Revenuehunt_ProductQuiz"/>
+		</route>
+	</router>
+</config>
