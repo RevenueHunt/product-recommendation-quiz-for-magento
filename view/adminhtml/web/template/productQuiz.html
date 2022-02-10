@@ -1,0 +1,46 @@
+<!-- ko if: has_ssl == false -->
+    <div class="errors">
+        <div class="error">
+            <strong>Product Recommendation Quiz for eCommerce requires your website to have a valid HTTPS/SSL certificate.</strong>
+        </div>
+    </div>
+<!-- /ko -->
+
+<!-- ko if: has_migrated == true -->
+<div class="errors">
+    <div class="error">
+        <p><strong>We've detected that you've changed the domain name. We're migrating your Product Recommendation Quiz account from <?= $block->getDomain() ?> to <?= $block->getBaseUrl(); ?></p>
+        <p>Please <a href="https://revenuehunt.com/contact/" target="_blank">contact us</a> if you encounter any issues.</strong></p>
+    </div>
+</div>
+<!-- /ko -->
+<!-- ko if: has_migrated == false && has_ssl == true -->
+    <!-- ko if: hashId() == "" || secret() == "" -->
+    <div class="wrap">
+        <div class="wrap-content" style="padding: 1.5rem 2.5rem;">
+            <img data-bind="attr:{src:image}" width="24" height="24" alt="RevenueHunt Logo" />
+            <p class="fright h-24 mtop-0" style="font-size: 14px; width: calc(100% - 35px);">Product Recommendation Quiz for eCommerce<span class="fright">by <a href="https://revenuehunt.com/" target="_blank">RevenueHunt</a></span></p>
+            <hr>
+            <h1 class="mtop-60 alcenter">Congratulations!</h1>
+            <p class="lg alcenter">You're one step away from getting more conversions and sales in your store.</p>
+            <p class="lg alcenter">We just need you to grant this plugin permission to access your eCommerce plugin:</p>
+        </div>
+        <div class="page-main-actions">
+            <div class="lg alcenter mtop-30 page-actions" style="display:flex;">
+                <button class="action-default primary add" data-bind="click: create"><span data-bind="i18n: 'grant permission now'"></span></button>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: hashId() != "" && secret() != "" -->
+    <div class="wrap">
+        <img  data-bind="attr:{src:image}" width="24" height="24" alt="RevenueHunt Logo" />
+        <p class="fright h-24 mtop-0" style="font-size: 14px; width: calc(100% - 35px);">Product Recommendation Quiz for eCommerce<span class="fright">by <a href="https://revenuehunt.com/" target="_blank">RevenueHunt</a></span></p>
+        <iframe
+            data-bind="attr: {title: 'Product Recommendation Quiz', src: iframeSrc(), name: 'app-iframe', context: 'Main'}"
+            style="position: relative; border: none; width: calc(100% + 41px); margin-left: -21px; height: calc(100vh - 85px);">
+            <p>Your browser does not support iframes.</p>
+        </iframe>
+    </div>
+    <!-- /ko -->
+<!-- /ko -->

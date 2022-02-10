@@ -1,0 +1,21 @@
+<script>
+    require([
+        'jquery',
+        'prototype'
+    ], function(jQuery){
+
+        jQuery('#revoke_button').click(function () {
+            var params = {'form_key': '<?= $block->getFormKey();?>','store': '<?= $block->getStoreId();?>'};
+            new Ajax.Request('<?= $block->getAjaxUrl() ?>?isAjax=1', {
+                parameters:     params,
+                loaderArea:     false,
+                asynchronous:   true,
+                onSuccess: function(response) {
+                    location.reload();
+                }
+            });
+        });
+
+    });
+</script>
+<?php echo $block->getButtonHtml() ?>

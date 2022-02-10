@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+        <add id="Revenuehunt_ProductQuiz::revenuehunt"
+             title="Revenuehunt"
+             translate="title"
+             module="Revenuehunt_ProductQuiz"
+             sortOrder="10"
+             parent="Magento_Backend::marketing"
+             resource="Revenuehunt_ProductQuiz::product_quiz"
+             dependsOnModule="Magento_Backend" />
+        <add id="Revenuehunt_ProductQuiz::product_quiz"
+             action="prqfw/index/index"
+             title="Product Quiz"
+             translate="title"
+             module="Revenuehunt_ProductQuiz"
+             sortOrder="11"
+             parent="Revenuehunt_ProductQuiz::revenuehunt"
+             dependsOnModule="Magento_Backend"
+             resource="Revenuehunt_ProductQuiz::product_quiz"/>
+    </menu>
+</config>

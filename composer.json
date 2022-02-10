@@ -1,0 +1,23 @@
+{
+    "name": "revenuehunt/module-productquiz",
+    "description": "Product Recommendation Quiz",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "version": "1.0.5",
+    "authors": [
+        {
+            "name": "Daniel Coull",
+            "email": "hello@boxleafdigital.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Revenuehunt\\ProductQuiz\\": ""
+        }
+    }
+}

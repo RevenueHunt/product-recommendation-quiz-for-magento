@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+        <referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="store_switcher">
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </referenceContainer>
+		<referenceContainer name="content">
+            <block name="index.productQuiz" class="Revenuehunt\ProductQuiz\Block\Adminhtml\Index\Index" template="Revenuehunt_ProductQuiz::component.phtml" cacheable="false">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="productQuiz" xsi:type="array">
+                                <item name="component" xsi:type="string">Revenuehunt_ProductQuiz/js/components/quiz-iframe</item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+	</body>
+</page>

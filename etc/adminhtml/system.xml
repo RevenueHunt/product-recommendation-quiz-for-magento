@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="revenuehunt" translate="label" sortOrder="9999">
+			<label>Revenue Hunt</label>
+		</tab>
+		<section id="product_quiz" sortOrder="1" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>Product Quiz</label>
+			<tab>revenuehunt</tab>
+			<resource>Revenuehunt_ProductQuiz::config_Revenuehunt_productquiz</resource>
+			<group id="general" sortOrder="1" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>General</label>
+                <field id="prq_is_test" type="select" sortOrder="1" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>Is Test mode</label>
+                    <comment/>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>product_quiz/general/prq_is_test</config_path>
+                </field>
+				<field id="prq_api_url_test" type="text" sortOrder="1" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Api URL Test</label>
+                    <config_path>product_quiz/general/prq_api_url_test</config_path>
+                    <depends>
+                        <field id="prq_is_test">1</field>
+                    </depends>
+				</field>
+				<field id="prq_api_url" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>API URL</label>
+                    <config_path>product_quiz/general/prq_api_url</config_path>
+                    <depends>
+                        <field id="prq_is_test">0</field>
+                    </depends>
+				</field>
+                <field id="prq_iframe_url" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Iframe URL</label>
+                    <config_path>product_quiz/general/prq_iframe_url</config_path>
+				</field>
+			</group>
+			<group id="hidden" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Hidden</label>
+                <field id="revoke" translate="label comment tooltip" type="button" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Revoke Privileges</label>
+                    <frontend_model>Revenuehunt\ProductQuiz\Block\System\Config\Form\Revoke</frontend_model>
+                </field>
+                <field id="channel" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>Channel</label>
+                    <comment>Set dynamically on create</comment>
+                    <config_path>product_quiz/hidden/channel</config_path>
+                </field>
+                <field id="rh_domain" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>Active Domain</label>
+                    <comment>Set dynamically on create</comment>
+                    <config_path>product_quiz/hidden/rh_domain</config_path>
+                    <frontend_model>Revenuehunt\ProductQuiz\Block\System\Config\Form\Disable</frontend_model>
+                </field>
+				<field id="rh_token" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Token</label>
+                    <comment>Set dynamically on create</comment>
+					<config_path>product_quiz/hidden/rh_token</config_path>
+                    <frontend_model>Revenuehunt\ProductQuiz\Block\System\Config\Form\Disable</frontend_model>
+				</field>
+				<field id="rh_shop_hashid" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Shop HashID</label>
+                    <comment>Set dynamically on create</comment>
+					<config_path>product_quiz/hidden/rh_shop_hashid</config_path>
+                    <frontend_model>Revenuehunt\ProductQuiz\Block\System\Config\Form\Disable</frontend_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

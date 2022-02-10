@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<product_quiz>
+			<general>
+                <prq_is_test>0</prq_is_test>
+                <prq_api_url_test>https://api-staging.revenuehunt.com/</prq_api_url_test>
+                <prq_api_url>https://api.revenuehunt.com/</prq_api_url>
+                <prq_iframe_url>https://admin.revenuehunt.com/</prq_iframe_url>
+			</general>
+			<hidden>
+                <channel>magento</channel>
+			</hidden>
+		</product_quiz>
+	</default>
+</config>
