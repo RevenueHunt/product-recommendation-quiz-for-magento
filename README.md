@@ -1,4 +1,4 @@
-# Mage2 Module Revenuehunt ProductQuiz
+# Product Recommendation Quiz for Magento
 
     ``revenuehunt/module-productquiz``
 
@@ -10,7 +10,7 @@
 
 
 ## Main Functionalities
-Product Recommendation Quiz
+This module/extension is a Product Recommendation Quiz for Magento 2. It's developed and maintained by [RevenueHunt](https://revenuehunt.com)
 
 ## Installation
 \* = in production please use the `--keep-generated` option
