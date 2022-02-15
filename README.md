@@ -61,7 +61,7 @@ There are several shopping verticals that are inherently more suited for a Produ
 * Sports & Outdoor Goods
 * Specialized Equipment & Supplies
 
-## Integration with third-party apps
+### INTEGRATION WITH THIRD PARTY APPS
 
 * Google Analytics
 * Facebook Pixel
