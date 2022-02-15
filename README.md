@@ -85,7 +85,6 @@ Explore how the plugin works in our [demo store](https://skincarequiz.myshopify.
 * You website must have a valid HTTPS/SSL certificate installed.
 * Does not work on local/development environments.
 
-
 ### WALKTHROUGH
 
 * Install and activate the module if you haven’t already done so
@@ -94,13 +93,11 @@ Explore how the plugin works in our [demo store](https://skincarequiz.myshopify.
 * Follow the **Success Checklist** to create and publish your quiz
 * Drive traffic to your quiz and start getting sales and leads!
 
-
-### MANUAL INSTALLATION
+### MANUAL INSTALLATION
 
 First, download the latest version of our module [here](https://github.com/RevenueHunt/product-recommendation-quiz-for-magento/archive/refs/heads/master.zip "Product Recommendation Quiz for Magento").
 
 Log in to your Magento dashboard, navigate to the modules menu, and click on "Add New", then click on "Upload Module". Choose the ZIP file you downloaded in the previous step and click on "Install Now".
-
 
 ## Frequently Asked Questions
 
