@@ -3,7 +3,7 @@
 A quiz that does the selling for you. Recover abandoned carts, capture leads and grow your audience.
 
 ## Main Functionalities
-This module/extension is a Product Recommendation Quiz for Magento 2. It's developed and maintained by [RevenueHunt](https://revenuehunt.com). At RevenueHunt we build tools which help merchants grow their eCommerce by driving traffic, conversions and sales.
+This module is a Product Recommendation Quiz for Magento 2. It's developed and maintained by [RevenueHunt](https://revenuehunt.com). At RevenueHunt we build tools which help merchants grow their eCommerce by driving traffic, conversions and sales.
 
 **Your quiz will help you achieve four goals:**
 
@@ -88,7 +88,7 @@ Explore how the plugin works in our [demo store](https://skincarequiz.myshopify.
 
 ### WALKTHROUGH
 
-* Install and activate the extension if you haven’t already done so
+* Install and activate the module if you haven’t already done so
 * In your Magento dashboard, navigate to the **Product Quiz** tab
 * Grant permissions to connect our plugin to your Magento store
 * Follow the **Success Checklist** to create and publish your quiz
@@ -97,9 +97,9 @@ Explore how the plugin works in our [demo store](https://skincarequiz.myshopify.
 
 ### MANUAL INSTALLATION
 
-First, download the latest version of our extension [here](https://github.com/RevenueHunt/product-recommendation-quiz-for-magento/archive/refs/heads/master.zip "Product Recommendation Quiz for Magento").
+First, download the latest version of our module [here](https://github.com/RevenueHunt/product-recommendation-quiz-for-magento/archive/refs/heads/master.zip "Product Recommendation Quiz for Magento").
 
-Log in to your Magento dashboard, navigate to the extensions menu, and click on "Add New", then click on "Upload Extension". Choose the ZIP file you downloaded in the previous step and click on "Install Now".
+Log in to your Magento dashboard, navigate to the modules menu, and click on "Add New", then click on "Upload Module". Choose the ZIP file you downloaded in the previous step and click on "Install Now".
 
 
 ## Frequently Asked Questions
