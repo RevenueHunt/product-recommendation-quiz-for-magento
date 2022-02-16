@@ -2,7 +2,7 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
 	<menu>
         <add id="Revenuehunt_ProductQuiz::revenuehunt"
-             title="Revenuehunt"
+             title="RevenueHunt"
              translate="title"
              module="Revenuehunt_ProductQuiz"
              sortOrder="10"
@@ -11,7 +11,7 @@
              dependsOnModule="Magento_Backend" />
         <add id="Revenuehunt_ProductQuiz::product_quiz"
              action="prqfw/index/index"
-             title="Product Quiz"
+             title="Product Recommendation Quiz"
              translate="title"
              module="Revenuehunt_ProductQuiz"
              sortOrder="11"

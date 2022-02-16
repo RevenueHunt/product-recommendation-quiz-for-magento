@@ -81,7 +81,7 @@ Explore how the plugin works in our [demo store](https://skincarequiz.myshopify.
 ### WALKTHROUGH
 
 * Install and activate the module if you haven’t already done so
-* In your Magento dashboard, navigate to **Marketing > Product Quiz**
+* In your Magento dashboard, navigate to **Marketing > Product Recommendation Quiz**
 * Grant permissions to connect our plugin to your Magento store
 * Follow the **Success Checklist** to create and publish your quiz
 * Drive traffic to your quiz and start getting sales and leads!

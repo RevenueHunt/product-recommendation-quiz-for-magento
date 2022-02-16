@@ -4,7 +4,7 @@
 		<resources>
 			<resource id="Magento_Backend::admin">
 				<resource id="Magento_Catalog::catalog">
-					<resource id="Revenuehunt_ProductQuiz::product_quiz" title="Product Quiz" sortOrder="10"/>
+					<resource id="Revenuehunt_ProductQuiz::product_quiz" title="Product Recommendation Quiz" sortOrder="10"/>
 				</resource>
 				<resource id="Magento_Backend::stores">
 					<resource id="Magento_Backend::stores_settings">
