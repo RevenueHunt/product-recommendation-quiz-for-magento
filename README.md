@@ -73,61 +73,26 @@ There are several shopping verticals that are inherently more suited for a Produ
 * Webhooks
 * And many more third-party apps via [Zapier](https://zapier.com/ "Connect your apps and automate workflows")
 
-## See the plugin in action
+### See the plugin in action
 
 Explore how the plugin works in our [demo store](https://skincarequiz.myshopify.com/ "Demo Skincare Store with Quiz")
 
 
-## Installation
-
-### MINIMUM REQUIREMENTS
-
-* You website must have a valid HTTPS/SSL certificate installed.
-* Does not work on local/development environments.
-
 ### WALKTHROUGH
 
 * Install and activate the module if you haven’t already done so
-* In your Magento dashboard, navigate to the **Product Quiz** tab
+* In your Magento dashboard, navigate to **Marketing > Product Quiz**
 * Grant permissions to connect our plugin to your Magento store
 * Follow the **Success Checklist** to create and publish your quiz
 * Drive traffic to your quiz and start getting sales and leads!
 
-### MANUAL INSTALLATION
+![Product Recommendation Quiz for Magento](https://revenuehunt.com/wp-content/uploads/2022/02/magento-modules-dashboard.png)
+
+
+## Installation
 
 First, download the latest version of our module [here](https://github.com/RevenueHunt/product-recommendation-quiz-for-magento/archive/refs/heads/master.zip "Product Recommendation Quiz for Magento").
 
-Log in to your Magento dashboard, navigate to the modules menu, and click on "Add New", then click on "Upload Module". Choose the ZIP file you downloaded in the previous step and click on "Install Now".
-
-## Frequently Asked Questions
-
-Please refer to our [FAQs page](https://revenuehunt.com/faqs/ "Frequently Asked Questions") for more information.
-
-
-## Screenshots
-
-1. Quiz Builder. Create the questions you ask to guide your customers throughout their shopping experience.
-2. Quiz Design. Choose one of our design templates or customize the quiz's design to match your store's look & feel. 
-3. Publish the quiz on your Magento store using any of our display modes (link, button, inline and automatic).
-4. Connect your quiz to your other apps. Send results to your CRM or mailing list automatically via Zapier.
-5. Review your quiz's responses and download the results as a CSV file.
-6. Looks awesome on smartphones and tablets too.
-7. Works great on all devices and browsers.
-8. Capture emails and grow your audience.
-9. Links seamlessly with your Magento cart.
-
-
-## Technical Specifications
-
-   `revenuehunt/module-productquiz`
-
- - [Main Functionalities](#markdown-header-main-functionalities)
- - [Installation](#markdown-header-installation)
- - [Configuration](#markdown-header-configuration)
- - [Specifications](#markdown-header-specifications)
- - [Attributes](#markdown-header-attributes)
-
-## Installation
 \* = in production please use the `--keep-generated` option
 
 ### Type 1: Zip file
@@ -171,10 +136,25 @@ Please refer to our [FAQs page](https://revenuehunt.com/faqs/ "Frequently Asked 
  - rh_shop_hashid (product_quiz/hidden/rh_shop_hashid)
 
 
-## Specifications
+## Technical Specifications
+
+* You website must have a valid HTTPS/SSL certificate installed.
+* Does not work on local/development environments.
+
+   `revenuehunt/module-productquiz`
+
+ - [Main Functionalities](#markdown-header-main-functionalities)
+ - [Installation](#markdown-header-installation)
+ - [Configuration](#markdown-header-configuration)
+ - [Specifications](#markdown-header-specifications)
+ - [Attributes](#markdown-header-attributes)
 
  - API Endpoint
 	- POST - Revenuehunt\ProductQuiz\Api\PrqSetTokenManagementInterface > Revenuehunt\ProductQuiz\Model\PrqSetTokenManagement
 
  - Controller
 	- adminhtml > prqfw/index/index
+
+## Frequently Asked Questions
+
+Please refer to our [FAQs page](https://revenuehunt.com/faqs/ "Frequently Asked Questions") for more information.
