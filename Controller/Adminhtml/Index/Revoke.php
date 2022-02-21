@@ -72,7 +72,9 @@ class Revoke extends Action
            $this->confg->setConfig('RH_TOKEN', null);
            $this->confg->setConfig('RH_DOMAIN',null );
         } catch (\Exception $e) {
-           die(var_dump($e->getMessage()));
+           /* die(var_dump($e->getMessage())); */
+           $result = $this->resultJsonFactory->create();
+           return $result->setData(['success' => false ]);
         }
 
         $types = array('config','reflection','db_ddl','config_integration','config_integration_api','config_webservice');
