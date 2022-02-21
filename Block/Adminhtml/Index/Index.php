@@ -60,4 +60,3 @@ class Index extends Template
         }
     }
 }
-

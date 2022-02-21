@@ -92,4 +92,3 @@ class Revoke extends Action
     }
 
 }
-?>
