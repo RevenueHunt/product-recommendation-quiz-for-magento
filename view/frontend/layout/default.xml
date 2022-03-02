@@ -9,6 +9,7 @@
     <body>
         <referenceBlock name="head.additional">
             <block class="Magento\Framework\View\Element\Template" name="revenuehunt-embed" template="Revenuehunt_ProductQuiz::head/custom-head.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="revenuehunt-script" template="Revenuehunt_ProductQuiz::head/js.phtml" />
         </referenceBlock>
     </body>
 

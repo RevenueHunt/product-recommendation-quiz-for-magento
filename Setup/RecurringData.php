@@ -50,7 +50,7 @@ class RecurringData implements InstallDataInterface
     {
 
         $name = 'product recommendation quiz';
-        $email = 'no-reply@revenuehunt.co.uk';
+        $email = 'no-reply@revenuehunt.com';
 
         $integrationFactory = $this->_integrationFactory->create();
 

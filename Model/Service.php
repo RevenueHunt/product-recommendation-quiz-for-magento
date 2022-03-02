@@ -178,7 +178,7 @@ class Service
         $create =  trim($this->_config->getApiUrl(),'/') . '/api/v1/magento/create';
         //$create = 'https://d57883ad653649.localhost.run'. '/api/v1/magento/create';
         $name = 'product recommendation quiz';
-        $email = 'no-reply@revenuehunt.co.uk';
+        $email = 'no-reply@revenuehunt.com';
 
         $integrationFactory = $this->_integrationFactory->create();
         $consumerFactory = $this->_consumerFactory->create();
