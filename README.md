@@ -155,6 +155,12 @@ First, download the latest version of our module [here](https://github.com/Reven
  - Controller
 	- adminhtml > prqfw/index/index
 
+## MiniCart integration
+
+The MiniCart integration is disabled by default. If your theme uses MiniCart, you can uncomment the code in this file:
+
+`view/frontend/layout/default.xml`
+
 ## Frequently Asked Questions
 
 Please refer to our [FAQs page](https://revenuehunt.com/faqs/ "Frequently Asked Questions") for more information.
