@@ -159,7 +159,7 @@ First, download the latest version of our module [here](https://github.com/Reven
 
 The MiniCart integration is disabled by default. If your theme uses MiniCart, you can uncomment the code in this file:
 
-`view/frontend/layout/default.xml`
+[view/frontend/layout/default.xml](https://github.com/RevenueHunt/product-recommendation-quiz-for-magento/blob/master/view/frontend/layout/default.xml)
 
 ## Frequently Asked Questions
 
