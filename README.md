@@ -161,6 +161,9 @@ The MiniCart integration is disabled by default. If your theme uses MiniCart, yo
 
 [view/frontend/layout/default.xml](https://github.com/RevenueHunt/product-recommendation-quiz-for-magento/blob/master/view/frontend/layout/default.xml)
 
+`<!-- Uncomment the line below in order to integrate with MINICART -->
+<!-- <block class="Magento\Framework\View\Element\Template" name="revenuehunt-script" template="Revenuehunt_ProductQuiz::head/js.phtml" /> -->`
+
 ## Frequently Asked Questions
 
 Please refer to our [FAQs page](https://revenuehunt.com/faqs/ "Frequently Asked Questions") for more information.
