@@ -45,14 +45,14 @@ define([
                 dataType: 'json',
                 contentType: "application/json",
                 context: $('body')
-            }).success(function (response) {
+            }).done(function (response) {
                 if(response.error == false)  {
                     self.hashId = response.data.hashId
                     self.secret = response.data.secret
                     location.reload()
                 }
 
-            }).error(function(response) {
+            }).fail(function(response) {
                 console.log('ERROR BLOCK');
                 console.log(response);
             });
@@ -69,9 +69,9 @@ define([
                 },
                 dataType: 'text',
                 context: $('body')
-            }).complete(function (data) {
-                console.log(data.responseText)
-                self.iframeSrc(data.responseText)
+            }).always(function (data) {
+                console.log(data)
+                self.iframeSrc(data)
             });
 
             return '';

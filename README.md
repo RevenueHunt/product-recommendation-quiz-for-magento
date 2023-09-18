@@ -81,6 +81,7 @@ Explore how the plugin works in our [demo store](https://skincarequiz.myshopify.
 ### WALKTHROUGH
 
 * Install and activate the module if you haven’t already done so
+* In your Magento dashboard, navigate to **STORES > Stores > Settings > Configuration > SERVICES > Magento Web API > Web API Security > Allow Anonymous Guest Access : Yes** [See Devdocs Reference](https://devdocs.magento.com/guides/v2.3/rest/anonymous-api-security.html)
 * In your Magento dashboard, navigate to **Marketing > Product Recommendation Quiz**
 * Grant permissions to connect our plugin to your Magento store
 * Follow the **Success Checklist** to create and publish your quiz
