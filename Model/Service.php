@@ -148,7 +148,7 @@ class Service
 
         $data = sprintf('hashid=%s&domain=%s&plugin_version=%s&timestamp=%s',$hashId,$domain,$version,(string)time());
         $secret = $this->_config->getSecret();
-        $hmac = base64_encode(hash_hmac('sha256', $data,$secret, true));
+        $hmac = base64_encode(hash_hmac('sha256', $data, $secret ?? "", true));
 
         $request = [
             'timestamp' => time(),
