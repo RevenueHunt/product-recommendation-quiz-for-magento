@@ -18,8 +18,15 @@
     <!-- ko if: hashId() == "" || secret() == "" -->
     <div class="wrap">
         <div class="wrap-content" style="padding: 1.5rem 2.5rem;">
-            <img data-bind="attr:{src:image}" width="24" height="24" alt="RevenueHunt Logo" />
-            <p class="fright h-24 mtop-0" style="font-size: 14px; width: calc(100% - 35px);">Product Recommendation Quiz for eCommerce<span class="fright">by <a href="https://revenuehunt.com/" target="_blank">RevenueHunt</a></span></p>
+            <div class="col-m-12">
+                <p class="revenuehunt-left col-m-6">
+                    <a class="link-revenuehunt" href="https://revenuehunt.com/" target="_blank"></a>
+                    Product Recommendation Quiz for eCommerce
+                </p>
+                <p class="revenuehunt-right col-m-6">
+                    <span class="fright"> by <a href="https://revenuehunt.com/" target="_blank">RevenueHunt</a></span>
+                </p>
+            </div>
             <hr>
             <h1 class="mtop-60 alcenter">Congratulations!</h1>
             <p class="lg alcenter">You're one step away from getting more conversions and sales in your store.</p>
@@ -34,8 +41,15 @@
     <!-- /ko -->
     <!-- ko if: hashId() != "" && secret() != "" -->
     <div class="wrap">
-        <img  data-bind="attr:{src:image}" width="24" height="24" alt="RevenueHunt Logo" />
-        <p class="fright h-24 mtop-0" style="font-size: 14px; width: calc(100% - 35px);">Product Recommendation Quiz for eCommerce<span class="fright">by <a href="https://revenuehunt.com/" target="_blank">RevenueHunt</a></span></p>
+        <div class="col-m-12">
+            <p class="revenuehunt-left col-m-6">
+                <a class="link-revenuehunt" href="https://revenuehunt.com/" target="_blank"></a>
+                Product Recommendation Quiz for eCommerce
+            </p>
+            <p class="revenuehunt-right col-m-6">
+                <span class="fright"> by <a href="https://revenuehunt.com/" target="_blank">RevenueHunt</a></span>
+            </p>
+        </div>
         <iframe
             data-bind="attr: {title: 'Product Recommendation Quiz', src: iframeSrc(), name: 'app-iframe', context: 'Main'}"
             style="position: relative; border: none; width: calc(100% + 41px); margin-left: -21px; height: calc(100vh - 85px);">

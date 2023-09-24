@@ -1,0 +1,34 @@
+//
+//  RevenueHunt page header
+//  _____________________________________________
+
+//  Paths
+@revenuehunt-logo__image: url('../Revenuehunt_ProductQuiz/images/revenuehunt-logo.png');
+
+//  Styling
+.revenuehunt-right {
+  text-align: right;
+}
+.revenuehunt-left {
+  margin-bottom: -.4rem;
+  position: relative;
+  text-align: left;
+
+  .link-revenuehunt {
+    display: inline-block;
+    margin-right: .5rem;
+    text-decoration: none;
+    vertical-align: top;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      background-image: @revenuehunt-logo__image; // Use the image defined in your variable
+      background-size: cover; // This will resize the image to cover the container
+      width: 24px;
+      height: 24px;
+      position: relative;
+      top: -.3rem;
+    }
+  }
+}
