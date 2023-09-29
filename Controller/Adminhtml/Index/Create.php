@@ -7,6 +7,7 @@ declare(strict_types=1);
 
 namespace Revenuehunt\ProductQuiz\Controller\Adminhtml\Index;
 
+use Revenuehunt\ProductQuiz\Helper\Server;
 use Revenuehunt\ProductQuiz\Model\Service;
 use Exception;
 use Magento\Backend\App\Action;
@@ -48,28 +49,33 @@ class Create extends Action
     private $service;
 
     /**
+     * @var Server
+     */
+    private $serverHelper;
+
+    /**
      * Constructor
      *
      * @param Context $context
-     * @param FormKey $formKey
      * @param PageFactory $resultPageFactory
      * @param Data $jsonHelper
      * @param Service $service
      * @param LoggerInterface $logger
-     * @throws \Magento\Framework\Exception\LocalizedException
+     * @param Server $serverHelper
      */
     public function __construct(
         Context $context,
         PageFactory $resultPageFactory,
         Data $jsonHelper,
         Service  $service,
-        LoggerInterface $logger
+        LoggerInterface $logger,
+        Server $serverHelper
     ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->jsonHelper = $jsonHelper;
         $this->logger = $logger;
         $this->service = $service;
-
+        $this->serverHelper = $serverHelper;
         parent::__construct($context);
     }
 
@@ -81,6 +87,12 @@ class Create extends Action
     public function execute()
     {
         try {
+            if ($this->serverHelper->isLocalEnvironment()) {
+                $this->messageManager->addErrorMessage('This plugin does not work on local environments.
+                It needs to be installed on a live website. Your website needs to be public and not hidden by a
+                site under construction plugin because it needs connection to our server in order to work.');
+                return $this->jsonResponse(['error' => true, 'data' => []]);
+            }
             return $this->jsonResponse( $this->service->create());
         } catch (Exception $e) {
             $this->logger->critical($e);
