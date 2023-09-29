@@ -4,20 +4,40 @@ namespace Revenuehunt\ProductQuiz\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Framework\App\Helper\Context;
+use Magento\Framework\Exception\NoSuchEntityException;
+use Magento\Framework\UrlInterface;
+use Magento\Store\Model\StoreManagerInterface;
 
 class Server extends AbstractHelper
 {
+    /** @var StoreManagerInterface */
+    private $storeManager;
+
     /** @var string */
     protected $serverEnvironment;
 
     /**
      * @param Context $context
+     * @param StoreManagerInterface $storeManager
      */
     public function __construct(
-        Context               $context
+        Context $context,
+        StoreManagerInterface $storeManager
     ) {
         parent::__construct($context);
+        $this->storeManager = $storeManager;
         $this->serverEnvironment = $this->getServerEnvironment();
+    }
+
+    /**
+     * @return bool
+     * @throws NoSuchEntityException
+     */
+    public function isSslEnabled()
+    {
+        $currentStore = $this->storeManager->getStore();
+        $baseUrl = $currentStore->getBaseUrl(UrlInterface::URL_TYPE_WEB);
+        return strpos($baseUrl, 'https://') === 0;
     }
 
     /**
