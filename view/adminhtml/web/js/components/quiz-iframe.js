@@ -46,12 +46,13 @@ define([
                 contentType: "application/json",
                 context: $('body')
             }).done(function (response) {
-                if(response.error == false)  {
+                if(response.error === false)  {
                     self.hashId = response.data.hashId
                     self.secret = response.data.secret
                     location.reload()
+                } else if (response.error === true) {
+                    location.reload()
                 }
-
             }).fail(function(response) {
                 console.log('ERROR BLOCK');
                 console.log(response);
