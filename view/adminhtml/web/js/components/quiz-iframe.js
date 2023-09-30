@@ -40,6 +40,7 @@ define([
             let createUrl =self.ajax.create
 
             $.ajax({
+                showLoader: true,
                 type: 'GET',
                 url: createUrl,
                 dataType: 'json',
