@@ -12,6 +12,7 @@ use Magento\Framework\App\Cache\Frontend\Pool;
 use Magento\Framework\App\Cache\TypeListInterface;
 use Magento\Framework\App\Request\Http;
 use Magento\Framework\HTTP\Client\Curl;
+use Magento\Framework\Message\ManagerInterface;
 use Magento\Framework\Oauth\Oauth;
 use Magento\Framework\Oauth\TokenProviderInterface;
 use Magento\Framework\Serialize\Serializer\Json;
@@ -74,6 +75,9 @@ class Service
      */
     private $logger;
 
+    /** @var ManagerInterface */
+    private $messageManager;
+
 
     /**
      * Service constructor.
@@ -86,6 +90,7 @@ class Service
      * @param TypeListInterface $cacheTypeList
      * @param Pool $cacheFrontendPool
      * @param LoggerInterface $logger
+     * @param ManagerInterface $messageManager
      * @param array $data
      */
     public function __construct
@@ -99,10 +104,9 @@ class Service
         TypeListInterface $cacheTypeList,
         Pool $cacheFrontendPool,
         LoggerInterface  $logger,
+        ManagerInterface $messageManager,
         array $data = []
-    )
-    {
-
+    ) {
         $this->_config = $config;
         $this->_json = $json;
         $this->_curl = $curl;
@@ -113,7 +117,7 @@ class Service
         $this->_cacheTypeList = $cacheTypeList;
         $this->_cacheFrontendPool = $cacheFrontendPool;
         $this->logger = $logger;
-
+        $this->messageManager = $messageManager;
     }
 
     /**
@@ -222,6 +226,10 @@ class Service
         {
             if($body['status'] == '500')
             {
+                $this->messageManager->addComplexErrorMessage(
+                    'adminRHNeedAccessMessage',
+                    ['url' => 'https://developer.adobe.com/commerce/webapi/rest/use-rest/anonymous-api-security/']
+                );
                 return ['error' => true, 'message'=> isset($body['exception']) ? $body['exception'] : '', 'data' => []];
             }
         }

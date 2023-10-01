@@ -1,0 +1,35 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+use Magento\Backend\Block\Template;
+use Magento\Framework\Escaper;
+
+/**
+ * @var $block Template
+ * @var $escaper Escaper
+ */
+?>
+
+<div class="rh-error-msg">
+    <p class="msg-header">There is a problem reaching out to your server,</p>
+    <ul>
+        <li>
+            <?= $escaper->escapeHtml(__("RevenueHunt server can't access your Magento server in order to test the Magento Product API endpoint.")) ?>
+        </li>
+        <li>
+            <?= $escaper->escapeHtml(
+                __(
+                    'Check API permissions in Magento admin. See this <a href="%1">Magento Devdocs</a> documentation for further details.',
+                    $block->getData('url')
+                ),
+                ['a']
+            ); ?>
+        </li>
+        <li>
+            <?= $escaper->escapeHtml(__("Other possible issues include .htaccess or two-factor authentication which can block access to your server.")) ?>
+        </li>
+    </ul>
+</div>
