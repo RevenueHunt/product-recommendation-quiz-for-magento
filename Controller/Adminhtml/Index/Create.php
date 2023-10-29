@@ -88,14 +88,13 @@ class Create extends Action
     {
         try {
             if ($this->serverHelper->isLocalEnvironment()) {
-                $this->messageManager->addErrorMessage('This plugin does not work on local environments.
+                $this->messageManager->addWarningMessage('This plugin does not work on local environments.
                 It needs to be installed on a live website. Your website needs to be public and not hidden by a
                 site under construction plugin because it needs connection to our server in order to work.');
-                return $this->jsonResponse(['error' => true, 'data' => []]);
-            } elseif (!$this->serverHelper->isSslEnabled()) {
-                $this->messageManager->addErrorMessage('Product Recommendation Quiz for eCommerce requires
+            }
+            if (!$this->serverHelper->isSslEnabled()) {
+                $this->messageManager->addWarningMessage('Product Recommendation Quiz for eCommerce requires
                  your website to have a valid HTTPS/SSL certificate.');
-                return $this->jsonResponse(['error' => true, 'data' => []]);
             }
             return $this->jsonResponse( $this->service->create());
         } catch (Exception $e) {
