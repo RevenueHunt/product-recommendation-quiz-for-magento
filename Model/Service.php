@@ -224,7 +224,7 @@ class Service
 
         if(isset($body['status']))
         {
-            if($body['status'] == '500')
+            if($body['status'] != '200')
             {
                 $this->messageManager->addComplexErrorMessage(
                     'adminRHNeedAccessMessage',

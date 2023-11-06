@@ -3,7 +3,7 @@
     "description": "Product Recommendation Quiz",
     "type": "magento2-module",
     "license": "proprietary",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "authors": [
         {
             "name": "RevenueHunt Team",
