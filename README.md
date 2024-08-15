@@ -1,5 +1,7 @@
 # Product Recommendation Quiz for Magento
 
+> ⚠️ **WARNING:** Support for the Product Recommendation Quiz for the Magento module has been discontinued. If you want to add the Product Recommendation Quiz to your store, we highly recommend using our standalone solution or migrating your store to Shopify or WooCommerce.
+
 A quiz that does the selling for you. Recover abandoned carts, capture leads and grow your audience.
 
 ## Main Functionalities
