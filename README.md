@@ -1,6 +1,6 @@
-# Product Recommendation Quiz for Magento
-
 > ⚠️ **WARNING:** Support for the Product Recommendation Quiz for the Magento module has been discontinued. If you want to add the Product Recommendation Quiz to your store, we highly recommend using our [standalone solution](https://revenuehunt.com/product-recommendation-quiz-standalone-google-product-feed/) or migrating your store to [Shopify](https://revenuehunt.com/product-recommendation-quiz-shopify/) or [WooCommerce](https://revenuehunt.com/product-recommendation-quiz-woocommerce/).
+
+# Product Recommendation Quiz for Magento
 
 A quiz that does the selling for you. Recover abandoned carts, capture leads and grow your audience.
 
